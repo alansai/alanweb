@@ -13,7 +13,11 @@ def home():
 
 ####### Database####### 
 ## app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/somil/Desktop/todo/todo.db
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/alantyping/workspace/flask_personal/alanweb/app/todo.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/alantyping/workspace/flask_personal/alanweb/app/todo.db'
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# basedir = os.path.abspath(os.path.dirname(__file__))
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.paht.join(basedir, 'todo.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db')
   
 db = SQLAlchemy(app) 
   
@@ -73,4 +77,4 @@ def about():
     return render_template("about.html")
 
 # if __name__=="__main__":
-#     app.run(debug=True)
+    app.run(debug=True)
