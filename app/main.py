@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for 
-from flask_sqlalchemy import SQLAlchemy  
+from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy, os
   
 def getApp():
     return app
@@ -14,10 +14,10 @@ def home():
 ####### Database####### 
 ## app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/somil/Desktop/todo/todo.db
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/alantyping/workspace/flask_personal/alanweb/app/todo.db'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# basedir = os.path.abspath(os.path.dirname(__file__))
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.paht.join(basedir, 'todo.db')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'todo.db')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db')
   
 db = SQLAlchemy(app) 
   
